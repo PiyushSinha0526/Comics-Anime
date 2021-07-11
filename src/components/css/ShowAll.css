@@ -1,0 +1,49 @@
+.flex{
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex> h4 {
+    width: 100%;
+    color: rgb(78, 78, 80);
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+.flex .btns {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevnext_btn {
+    text-transform: capitalize;
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #C3083F;
+    outline: 2px solid black;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.1s ease-in;
+}
+
+.prevnext_btn:hover{
+    color: black;
+    background-color: white;
+    outline: 2px solid #C3083F;
+}
+.prevnext_btn:active {
+    transform: scale(0.95);
+}
+
+.active>a{
+    color: red;
+}
