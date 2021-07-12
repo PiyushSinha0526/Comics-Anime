@@ -3,6 +3,7 @@ import CardSlider from "./components/CardSlider";
 import Navbar from "./components/Navbar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ShowAll from "./components/ShowAll";
+import Details from "./components/Details";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/manga">
             <ShowAll type="manga"/>
+          </Route>
+          <Route exact path="/details/:type/:id">
+            <Details/>
           </Route>
         </Switch>
       </div>

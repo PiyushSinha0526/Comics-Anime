@@ -14,7 +14,7 @@ export default function CardSlider({type}) {
   const [resource, loading] = useAxios(
     `https://api.jikan.moe/v3/top/${type}/1`
   );
-
+    !loading && console.log(resource)
   const settings = {
     className: "CardSlider__container",
     infinite: true,
@@ -60,7 +60,7 @@ export default function CardSlider({type}) {
         <h1>Top {type}</h1>
         <Slider {...settings}>
           {resource.top.slice(0,20).map((res) => {
-            return <Card key={res.mal_id} data={res} />;
+            return <Card key={res.mal_id} data={res} type={type}/>;
           })}
         </Slider>
       </div>

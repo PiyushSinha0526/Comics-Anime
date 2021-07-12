@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-export default function Card({data}) {
+export default function Card({data, type}) {
     const img = data.image_url;
     return (
         <>
-        <Link to={`/${data.mal_id}`}>
+        <Link to={`/details/${type}/${data.mal_id}`}>
         <div
         className="card"
         style={{backgroundImage: 'url('+img+')'}}

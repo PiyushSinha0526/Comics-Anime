@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import TopItems from "./TopItems";
+import Card from "./Card";
 import useAxios from "./useAxios";
 import PrevNextBtn from "./PrevNextBtn";
 import "./css/ShowAll.css";
@@ -26,7 +26,7 @@ export default function ShowAll({ type }) {
         Showing results from {1 + 50 * (fetchPageNo - 1)} to {50 * fetchPageNo}
       </h4>
       {resource.top.map((res) => {
-          return <TopItems key={res.mal_id} data={res} />;
+          return <Card key={res.mal_id} data={res} type={type}/>;
         })}
     </div>
   );

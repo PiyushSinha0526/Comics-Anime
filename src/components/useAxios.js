@@ -14,7 +14,6 @@ export default function useAxios(url) {
         { cancelToken: source.token }
       )
       .then((res) => {
-        // console.log(res.data);
         setResource(res.data);
         setLoading(false);
       })
