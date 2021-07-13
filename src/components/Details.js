@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/Details.css";
 import useAxios from "./useAxios";
 import { useParams } from "react-router-dom";
 
@@ -11,25 +12,30 @@ export default function Details() {
   return (
     <div className="details">
       <div className="details__top">
-        <span>Type {type}</span>
-        <span>Status {resource.status}</span>
-        <span>Score {resource.score}</span>
+        <span>Type: {type}</span>
+        <span>Status: {resource.status}</span>
+        <span>Score: {resource.score}</span>
       </div>
       <div className="details__body">
-        <div className="details__info">
-          <h2 className="details__info-title">Title {}</h2>
-          <p className="details__info-synopsis">{}</p>
+        <div className="details__body-info">
+        <h1 className="details__body-title">{resource.title}</h1>
           <div>
-            <span>{resource.duration}</span>
-            <span>Aired {resource.aired.string}</span>
-            <span>Rating{resource.rating}</span>
-            <span>{resource.rank}</span>
-            <span>{resource.popularity}</span>
+          <h4>Rank: <span>{resource.rank}</span></h4>
+          <h4>Popularity: <span>{resource.popularity}</span></h4>
+          <h4>Episodes: <span>{resource.episodes}</span></h4>
+          <h4>Duration: <span>{resource.duration}</span></h4>
+          <h4>Source: <span>{resource.source}</span></h4>
+          <h4>Rating: <span>{resource.rating}</span></h4>
+          <h4>Studios: <span>{resource.studios.map(studio=><>{studio.name}, </>)}</span></h4>
+          <h4>Trailer: <a href={resource.trailer_url}>click</a></h4>
+          <h4>Genres: <span>{resource.genres.map(gen=><>{gen.name}, </>)}</span></h4>
           </div>
         </div>
-        <div className="details__cover">
-          {/* <img src={resource.image_url} alt="cover image" /> */}
-        </div>
+          <img src={resource.image_url} alt="helloosd" />
+      </div>
+      <div className="details__bottom">
+        <h2>Summary</h2>
+        <p>{resource.synopsis}</p>
       </div>
     </div>
   );
