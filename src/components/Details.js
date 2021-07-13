@@ -1,7 +1,12 @@
 import React from "react";
+//css
 import "./css/Details.css";
+// from npm package
 import useAxios from "./useAxios";
 import { useParams } from "react-router-dom";
+// js components
+import Anime from "./Anime";
+import Manga from "./Manga";
 
 export default function Details() {
   const { type, id } = useParams();
@@ -12,29 +17,15 @@ export default function Details() {
   return (
     <div className="details">
       <div className="details__top">
-        <span>Type: {type}</span>
-        <span>Status: {resource.status}</span>
-        <span>Score: {resource.score}</span>
+        <h3>Type: <span>{type}</span></h3>
+        <h3>Status: <span>{resource.status}</span></h3>
+        <h3>Score: <span>{resource.score}</span></h3>
       </div>
       <div className="details__body">
-        <div className="details__body-info">
-        <h1 className="details__body-title">{resource.title}</h1>
-          <div>
-          <h4>Rank: <span>{resource.rank}</span></h4>
-          <h4>Popularity: <span>{resource.popularity}</span></h4>
-          <h4>Episodes: <span>{resource.episodes}</span></h4>
-          <h4>Duration: <span>{resource.duration}</span></h4>
-          <h4>Source: <span>{resource.source}</span></h4>
-          <h4>Rating: <span>{resource.rating}</span></h4>
-          <h4>Studios: <span>{resource.studios.map(studio=><>{studio.name}, </>)}</span></h4>
-          <h4>Trailer: <a href={resource.trailer_url}>click</a></h4>
-          <h4>Genres: <span>{resource.genres.map(gen=><>{gen.name}, </>)}</span></h4>
-          </div>
-        </div>
-          <img src={resource.image_url} alt="helloosd" />
+        {type==="anime"?(<Anime resource={resource}/>): <Manga resource={resource}/>}
       </div>
       <div className="details__bottom">
-        <h2>Summary</h2>
+        <h3>Summary</h3>
         <p>{resource.synopsis}</p>
       </div>
     </div>

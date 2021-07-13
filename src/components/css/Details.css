@@ -1,12 +1,14 @@
 .details {
     max-width: 75%;
-    margin: 1rem auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    outline: 2px solid #C3083F;
+    outline: 2px solid rgb(195, 8, 63);
     border-radius: 10px 10px 0 0;
+    box-shadow: 0 10px 20px rgba(195, 8, 63, 0.19),
+    0 6px 6px rgba(195, 8, 63, 0.23);
 }
 
 .details__top {
@@ -17,7 +19,14 @@
     gap: 1.5rem;
     outline: 2px solid #C3083F;
     border-radius: 10px 10px 0 0;
-    background-color: #C3083F;
+    background-color: #4E4E50;
+}
+.details__top h3 {
+    color: rgb(255, 255, 255, 0.5);
+}
+.details__top h3>span {
+    color: #1a1a1d;
+    text-transform: capitalize;
 }
 
 .details__body {
@@ -39,8 +48,10 @@
 }
 
 .details__body img {
+    border: 2px solid black ;
     width: 270px;
     height: 320px;
+    filter: drop-shadow(0 7px 15px hsl(0, 0%, 0%));
 }
 
 .details__body-info h4 {

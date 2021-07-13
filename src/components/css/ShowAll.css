@@ -43,7 +43,3 @@
 .prevnext_btn:active {
     transform: scale(0.95);
 }
-
-.active>a{
-    color: red;
-}

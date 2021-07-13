@@ -1,5 +1,7 @@
 import React from "react";
+// css
 import './css/Navbar.css'
+// from npm package
 import { Link } from "react-router-dom";
 export default function Navbar() {
     const getSearchTerm = () => {

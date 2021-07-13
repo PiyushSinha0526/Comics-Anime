@@ -1,7 +1,9 @@
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+// css
 import "./App.css";
+// js components
 import CardSlider from "./components/CardSlider";
 import Navbar from "./components/Navbar";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ShowAll from "./components/ShowAll";
 import Details from "./components/Details";
 

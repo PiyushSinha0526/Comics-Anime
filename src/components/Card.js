@@ -1,7 +1,9 @@
 import React from 'react'
+// from npm package
 import { Link } from "react-router-dom";
 
 export default function Card({data, type}) {
+    // type = anime/manga
     const img = data.image_url;
     return (
         <>

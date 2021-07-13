@@ -1,4 +1,5 @@
 import React from "react";
+// css
 import "./css/Top.css";
 
 // components and custom hook
@@ -11,10 +12,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function CardSlider({type}) {
+  // type = anime/manga
   const [resource, loading] = useAxios(
     `https://api.jikan.moe/v3/top/${type}/1`
   );
     !loading && console.log(resource)
+    // slick slider settings
   const settings = {
     className: "CardSlider__container",
     infinite: true,

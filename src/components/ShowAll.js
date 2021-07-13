@@ -1,8 +1,10 @@
 import React, { useState, useEffect} from "react";
+//css
+import "./css/ShowAll.css";
+// js components
 import Card from "./Card";
 import useAxios from "./useAxios";
 import PrevNextBtn from "./PrevNextBtn";
-import "./css/ShowAll.css";
 
 export default function ShowAll({ type }) {
   
