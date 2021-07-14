@@ -12,7 +12,7 @@ export default function Card({data, type}) {
         className="card"
         style={{backgroundImage: 'url('+img+')'}}
         >
-            <span># {data.rank}</span>
+            {data.rank? (<span># {data.rank}</span>):<span>{data.score}&#9733;</span>}
             <h1>{data.title}</h1>
         </div>
         </Link>

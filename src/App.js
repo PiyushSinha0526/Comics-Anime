@@ -6,6 +6,7 @@ import CardSlider from "./components/CardSlider";
 import Navbar from "./components/Navbar";
 import ShowAll from "./components/ShowAll";
 import Details from "./components/Details";
+import Search from "./components/Search";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route exact path="/details/:type/:id">
             <Details/>
+          </Route>
+          <Route exact path="/search/:type/:term">
+            <Search/>
           </Route>
         </Switch>
       </div>

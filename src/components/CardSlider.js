@@ -1,6 +1,6 @@
 import React from "react";
 // css
-import "./css/Top.css";
+import "./css/CardSlider.css";
 
 // components and custom hook
 import Card from "./Card";
@@ -16,7 +16,6 @@ export default function CardSlider({type}) {
   const [resource, loading] = useAxios(
     `https://api.jikan.moe/v3/top/${type}/1`
   );
-    !loading && console.log(resource)
     // slick slider settings
   const settings = {
     className: "CardSlider__container",
