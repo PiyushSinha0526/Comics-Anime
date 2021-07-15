@@ -1,3 +1,12 @@
+## Resource used:
+* Api - [Jikan API](https://jikan.moe/)
+* Npm - 1. [axios](https://www.npmjs.com/package/axios)
+        2. [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+        3. [react-use](https://www.npmjs.com/package/react-use)
+        4. [react-loading](https://www.npmjs.com/package/react-loading)
+        5. [react-slick](https://www.npmjs.com/package/react-slick)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
