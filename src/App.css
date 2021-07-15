@@ -16,9 +16,18 @@ body {
 img {
   width: 100%;
 }
+
 h1, h2, h3, p {
   margin: 0;
 }
+
 .App {
   height: 100vh;
+}
+
+.loadingComp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

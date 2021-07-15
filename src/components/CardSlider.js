@@ -5,7 +5,7 @@ import "./css/CardSlider.css";
 // components and custom hook
 import Card from "./Card";
 import useAxios from "./useAxios";
-
+import LoadingSpin from "./LoadingSpin";
 // from npm package
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -55,7 +55,7 @@ export default function CardSlider({type}) {
     ],
   };
 
-  if (loading) return "loading";
+  if (loading) return <LoadingSpin type={'spin'}/>;
   return (
     <>
       <div className="CardSlider">

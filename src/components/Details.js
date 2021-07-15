@@ -5,6 +5,7 @@ import "./css/Details.css";
 import { useParams } from "react-router-dom";
 // components and custom hook
 import useAxios from "./useAxios";
+import LoadingSpin from "./LoadingSpin";
 import Anime from "./Anime";
 import Manga from "./Manga";
 
@@ -13,7 +14,7 @@ export default function Details() {
   const [resource, loading] = useAxios(
     `https://api.jikan.moe/v3/${type}/${id}`
   );
-  if (loading) return "loading";
+  if (loading) return <LoadingSpin type={'spin'}/>;
   return (
     <div className="details">
       <div className="details__top">

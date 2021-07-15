@@ -9,10 +9,12 @@ export default function Navbar() {
   const [whatType, setWhatType] = useState('anime');
   const typeObj = ['anime', 'manga']
   const inputRef = useRef();
+
   const clickHandler = () => {
     setTerm(inputRef.current.value);
     inputRef.current.value = ''
   };
+
   return (
     <div className="navbar">
       <div className="navbar__logo">
