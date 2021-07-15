@@ -5,7 +5,7 @@ export default function Manga({resource}) {
         <>
         <div className="details__body-info">
             <h1 className="details__body-title">{resource.title}</h1>
-          <div>
+          <div className="details__body-data">
           <h4>Rank: <span>{resource.rank}</span></h4>
           <h4>Popularity: <span>{resource.popularity}</span></h4>
           <h4>Chapters: <span>{resource.chapters? resource.chapters: "Unknown"}</span></h4>

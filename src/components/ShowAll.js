@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 //css
 import "./css/ShowAll.css";
-// js components
+// components and custom hook
 import Card from "./Card";
 import useAxios from "./useAxios";
 import PrevNextBtn from "./PrevNextBtn";

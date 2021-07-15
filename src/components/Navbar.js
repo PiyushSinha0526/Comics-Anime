@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import "./css/Navbar.css";
 // from npm package
 import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const [term, setTerm] = useState("");
   const [whatType, setWhatType] = useState('anime');
@@ -10,7 +11,7 @@ export default function Navbar() {
   const inputRef = useRef();
   const clickHandler = () => {
     setTerm(inputRef.current.value);
-    // console.log(inputRef.current.value)
+    inputRef.current.value = ''
   };
   return (
     <div className="navbar">
@@ -26,7 +27,7 @@ export default function Navbar() {
             <Link to="/manga">Manga</Link>
           </li>
         </ul>
-        <div>
+        </div>
           <div className="search__wrap">
           <select
               className="navbar_custom-select"
@@ -47,17 +48,13 @@ export default function Navbar() {
               className="navbar_search"
               type="text"
               placeholder="Search..."
-              // value={"Nothing"}
               ref={inputRef}
               onChange={(e) => setTerm(e.target.value)}
             />
-            {/* <Link to={`/search/${type}/${term}`}onClick={clickHandler}>B</Link> */}
             <Link className="searchIcon" to={`/search/${whatType}/${term}`} onClick={clickHandler}>
             &#9898;
             </Link>
           </div>
-        </div>
-      </div>
     </div>
   );
 }

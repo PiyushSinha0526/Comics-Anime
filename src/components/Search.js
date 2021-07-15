@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from './Card'
-import { useParams } from 'react-router';
-// from npm package
+// custom hook
 import useAxios from "./useAxios";
+// from npm package
+import { useParams } from 'react-router';
 
 export default function Search() {
     const { type, term } = useParams();
-    // const { term } = useParams();
     const [resource, loading] = useAxios(
         `https://api.jikan.moe/v3/search/${type}?q=${term}&page=1`
       );

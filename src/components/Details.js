@@ -2,9 +2,9 @@ import React from "react";
 //css
 import "./css/Details.css";
 // from npm package
-import useAxios from "./useAxios";
 import { useParams } from "react-router-dom";
-// js components
+// components and custom hook
+import useAxios from "./useAxios";
 import Anime from "./Anime";
 import Manga from "./Manga";
 

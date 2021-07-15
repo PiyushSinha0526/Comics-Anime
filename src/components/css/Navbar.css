@@ -1,11 +1,13 @@
 .navbar {
   max-width: 90%;
   margin: 1.2rem auto;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 10px;
   outline: 4px solid #4e4e50;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   justify-content: space-between;
 }
 
@@ -64,15 +66,24 @@ a {
   text-transform: capitalize;
   border: none;
 }
+
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
 }
+
 .searchIcon {
   padding: 0;
   position: absolute;
   font-size: 2rem;
   right: -3%;
   top: -0.4rem;
+}
+
+@media (max-width: 580px) {
+  .navbar {
+    justify-content: center;
+    gap: 0.5rem;
+  }
 }
